@@ -17,30 +17,33 @@ Rule 3: The argc (includes the name of the executable/command) of any command/
 program should be >=1 and < =4 
 
 Examples: 
- minibash$ pwd (argc =1)< br / >
- minibash$ grep to sample.txt (argc=3)< br / >
- minibash$ ls -l -t -a (argc =4)< br / >
+ minibash$ pwd (argc =1)
+
+ minibash$ grep to sample.txt (argc=3)
+
+ minibash$ ls -l -t -a (argc =4)
 
 Special Characters 
 The program should handle the following special characters. 
 
- # Counts the number of words present in a particular .txt file < br / >
+ # Counts the number of words present in a particular .txt file
 minibash$ # sample.txt //should output the number of words in 
 sample.txt
 
- ~ Text file (.txt) concatenation (up to 4 operations) < br / >
+ ~ Text file (.txt) concatenation (up to 4 operations)
  Ex minibash$ sample1.txt ~ sample2.txt ~ temp1.txt ~ temp2.txt 
  // Files must be concatenated in the order in which they are listed and 
 the final result is displayed on stdout 
 
- + Creates a running process in the background < br / >
+ + Creates a running process in the background
  minibash$ ex10 30 20 a + //should run “ex10 30 20 a” in the 
-background < br / >
- the argc of the command/program should be >=1 and <=4 < br / >
+background
+ the argc of the command/program should be >=1 and <=4
  //Note: minibash$fore should bring the last process pushed to the 
 background into the foreground of the minibash on which fore is 
-executed . No need to implement CTR-Z < br / >
- | Piping (up to 4 piping operations should be supported) < br / >
+executed . No need to implement CTR-Z
+
+ | Piping (up to 4 piping operations should be supported)
  Ex minibash$ ls -l -t -a |grep *.txt|wc| wc -w 
  // Each command/program should have argc >=1 and <=4 
  
@@ -63,11 +66,12 @@ minibash$ ls -1 >>dirlist.txt
  || Conditional Execution // see && 
 o Note in both && and ||, the argc of each command should be >=1 and 
 <=4 
+
 You are NOT required to combine special characters : ex $ p1 & p2 > list.txt 
 Note: 
  You must include comments throughout the program reasonably explaining the 
 working of the code. 
  You have to use fork() and exec() along with other pertinent system calls to run 
-commands from minishell //You cannot use the system() function 
+commands from minishell //You cannot use the system() function. 
  Appropriate error messages must be displayed by the program based on the 
 specifications. 
